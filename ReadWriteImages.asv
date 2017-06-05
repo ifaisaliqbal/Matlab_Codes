@@ -1,0 +1,32 @@
+clear;
+clc;
+
+src = dir('C:\Users\Faisal Iqbal\Desktop\nf\*.jpg');
+
+for l=1: length(src)
+   im = imread(strcat('C:\Users\Faisal Iqbal\Desktop\nf\',src(l).name));
+   im(:,:,1) = 0;%im(:,:,1)-10;
+   if(l<10)
+        imwrite(im,strcat('C:\Users\Faisal Iqbal\Desktop\newdata\00000',num2str(l),'.jpg'),'jpg');
+   elseif (l<100) 
+        imwrite(im,strcat('C:\Users\Faisal Iqbal\Desktop\newdata\0000',num2str(l),'.jpg')); 
+   elseif(l>99)
+        imwrite(im,strcat('C:\Users\Faisal Iqbal\Desktop\newdata\000',num2str(l),'.jpg'),'jpg');
+   end
+   
+end
+
+src = dir('C:\Users\Faisal Iqbal\Desktop\nf\*.jpg');
+
+for l=1: length(src)
+   im = imread(strcat('C:\Users\Faisal Iqbal\Desktop\nf\',src(l).name));
+   im(:,:,1) = 0;%im(:,:,1)-10;
+   if(l<10)
+        imwrite(im,strcat('C:\Users\Faisal Iqbal\Desktop\newdata\00000',num2str(l),'.jpg'),'jpg');
+   elseif (l<100) 
+        imwrite(im,strcat('C:\Users\Faisal Iqbal\Desktop\newdata\0000',num2str(l),'.jpg')); 
+   elseif(l>99)
+        imwrite(im,strcat('C:\Users\Faisal Iqbal\Desktop\newdata\000',num2str(l),'.jpg'),'jpg');
+   end
+   
+end
